@@ -1,0 +1,48 @@
+{
+	"name": "catberry-pug",
+	"description": "Catberry adapter for Pug template engine",
+	"version": "1.0",
+	"author": {
+		"name": "Miha Vizovišek",
+		"email": "miha.vizovisek@gmail.com"
+	},
+	"contributors": [
+		{
+			"name": "Miha Vizovišek",
+			"email": "miha.vizovisek@gmail.com"
+		}
+	],
+	"homepage": "http://pug-lang.com/",
+	"main": "./index.js",
+	"browser": {
+		"./lib/pug.js": "./browser/pug.js",
+		"./lib/TemplateProvider.js": "./browser/TemplateProvider.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/catberry/catberry-pug.git"
+	},
+	"keywords": [
+		"templates",
+		"pug",
+		"catberry",
+		"views"
+	],
+	"dependencies": {
+		"pug": "^2.0.0-alpha6"
+	},
+	"peerDependencies": {
+		"catberry": "^8.0.0"
+	},
+	"devDependencies": {
+		"eslint": "^2.0.0"
+	},
+	"scripts": {
+		"test": "./node_modules/.bin/eslint ./",
+		"lint-fix": "./node_modules/.bin/eslint ./ --fix"
+	},
+	"license": "MIT",
+	"engine": {
+		"node": ">=4"
+	}
+}
