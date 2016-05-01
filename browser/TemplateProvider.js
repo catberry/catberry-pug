@@ -1,5 +1,7 @@
 'use strict';
 
+const pugRuntimeWrap = require('pug-runtime/wrap');
+
 class TemplateProvider {
 
 	/**
@@ -16,7 +18,6 @@ class TemplateProvider {
 		 * @private
 		 */
 		this._pug = locator.resolve('pug');
-		this._pugWrap = locator.resolve('pug/wrap');
 
 		this._merge = this._pug.merge;
 
@@ -49,7 +50,7 @@ class TemplateProvider {
 	 * @param {string} compiled Compiled template source.
 	 */
 	registerCompiled(name, compiled) {
-		this._templates[name] = this._pugWrap(compiled);
+		this._templates[name] = pugRuntimeWrap(compiled);
 	}
 
 	/**
